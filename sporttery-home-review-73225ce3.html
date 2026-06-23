@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>竞彩网 · 稳定入口与页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8f9fb;
+      color: #1e2a3a;
+      font-family: system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 0 1.5rem;
+    }
+
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2.5rem 0 3rem;
+    }
+
+    /* 首页横幅 —— 纯文字节奏 */
+    .hero {
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid #e3e8ef;
+      padding-bottom: 2.2rem;
+    }
+
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #7d8caa;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      color: #0f1c2e;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #3d4d62;
+      max-width: 90%;
+    }
+
+    /* 背景说明卡片 */
+    .background-note {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
+      border: 1px solid #ebeff5;
+    }
+
+    .background-note h2 {
+      font-size: 1.1rem;
+      font-weight: 550;
+      color: #1f2b3c;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .background-note h2::before {
+      content: "📌";
+      font-size: 1rem;
+    }
+
+    .background-note p {
+      font-size: 0.95rem;
+      color: #364759;
+      margin-bottom: 0.7rem;
+    }
+
+    .background-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 三段自然介绍 —— 窄正文，轻卡片 */
+    .intro-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .intro-item {
+      padding: 0 0 1.2rem 0;
+      border-bottom: 1px dashed #dce1e9;
+    }
+
+    .intro-item:last-child {
+      border-bottom: none;
+    }
+
+    .intro-item h3 {
+      font-size: 1.05rem;
+      font-weight: 550;
+      color: #111e2e;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .intro-item p {
+      font-size: 0.95rem;
+      color: #374a5c;
+    }
+
+    .intro-item a {
+      color: #1a4f8b;
+      text-decoration: none;
+      border-bottom: 1px solid #b8c9de;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-item a:hover {
+      color: #0a2d52;
+      border-bottom-color: #0a2d52;
+    }
+
+    /* 页尾访问提示 */
+    .footer-note {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e3e8ef;
+      text-align: left;
+      font-size: 0.95rem;
+      color: #3b4e64;
+    }
+
+    .footer-note a {
+      color: #1a4f8b;
+      text-decoration: none;
+      border-bottom: 1px solid #b8c9de;
+      font-weight: 450;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #1a4f8b;
+    }
+
+    .footer-note .small-meta {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #7a8aa0;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 480px) {
+      body {
+        padding: 0 1rem;
+      }
+      .page {
+        padding: 1.8rem 0 2rem;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero p {
+        max-width: 100%;
+        font-size: 0.95rem;
+      }
+      .background-note {
+        padding: 1.4rem 1.2rem;
+      }
+      .background-note h2 {
+        font-size: 1rem;
+      }
+      .intro-item h3 {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .page {
+        max-width: 680px;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 首页横幅 -->
+    <div class="hero">
+      <div class="hero-label">稳定入口 · 页面说明</div>
+      <h1>从一处入口开始<br>理解竞彩网的结构</h1>
+      <p>一份关于使用逻辑、定位与内容边界的整理笔记。</p>
+    </div>
+
+    <!-- 背景说明卡片 -->
+    <div class="background-note">
+      <h2>关于竞彩网</h2>
+      <p>竞彩网是围绕体育赛事竞猜信息而设计的专门平台。它的核心定位并非泛娱乐社区，而是一个以赛事数据、赔率变动和赛前资讯为支撑的实用工具型站点。用户通过竞彩网能够快速获取稳定的赛事信息入口，避免陷入信息过载的混乱阅读环境。</p>
+      <p>从页面结构来看，竞彩网采用了相对克制的布局逻辑：主次分明，功能模块与内容区域之间留有清晰的呼吸感。这种设计取向适合希望直接切入主题、不被无关元素分散注意力的访问者。</p>
+    </div>
+
+    <!-- 三段自然介绍 -->
+    <div class="intro-grid">
+      <div class="intro-item">
+        <h3>一、信息聚合与筛选逻辑</h3>
+        <p>竞彩网并不试图包揽所有体育内容，而是聚焦在赛前数据、实时赔率以及简洁的赛果呈现。每个页面都围绕“当前可关注什么”来组织信息层级。例如，首页默认展示当日重点赛事，同时保留按联赛、时间或关注度筛选的入口。这种筛选逻辑帮助访问者快速定位自己关心的场次，而不是在大量无关内容中自行摸索。</p>
+      </div>
+      <div class="intro-item">
+        <h3>二、稳定入口的设计意图</h3>
+        <p>在整个使用过程中，<a href="https://sporttery-home.com">竞彩网</a>始终扮演着“信息起点”的角色。无论是查看赔率变化趋势，还是回顾历史对赛数据，所有核心功能都围绕同一个入口展开，没有冗余跳转。这种设计在一定程度上降低了认知负担——访问者不需要记住复杂的路径，只需清楚这个入口能提供什么，然后按需深入。</p>
+      </div>
+      <div class="intro-item">
+        <h3>三、内容边界与使用场景</h3>
+        <p>竞彩网的内容范围以主流体育赛事为主，涵盖足球、篮球等项目的赛前分析与数据呈现。它不提供非体育类的泛娱乐内容，也不介入用户之间的社交讨论。因此，竞彩网更适合那些希望快速获取赛事信息、并对信息真实性有基本要求的访问者——而不是寻找社区互动或娱乐内容的用户。明确的内容边界，反而让这个入口变得可靠且易于理解。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要（轻量，融入页尾） -->
+    <div class="background-note" style="margin-bottom: 2rem;">
+      <h2>常见理解点摘要</h2>
+      <p style="margin-bottom: 0.4rem;">• 竞彩网不设论坛或用户评论板块，所有内容均由平台整理发布。</p>
+      <p style="margin-bottom: 0.4rem;">• 页面数据更新节奏以赛事进程为准，非实时流式刷新。</p>
+      <p style="margin-bottom: 0;">• 访问竞彩网无需注册即可浏览主要内容。</p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+      <p>若你希望直接查看当前赛事信息与数据排列，<a href="https://sporttery-home.com">竞彩网</a>提供了一个结构清晰的起点。建议使用桌面端或平板设备访问，以获得更完整的版面体验。</p>
+      <span class="small-meta">本页为功能介绍说明，不构成任何形式的引导或承诺。</span>
+    </div>
+
+  </div>
+</body>
+</html>
